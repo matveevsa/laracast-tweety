@@ -7,6 +7,13 @@ use App\Tweet;
 
 class TweetsController extends Controller
 {
+    public function index()
+    {
+        $tweets = auth()->user()->timeline();
+
+        return view('tweets.index', compact('tweets'));
+    }
+
     public function store()
     {
         $attributes = request()->validate(['body' => 'required|max:255']);

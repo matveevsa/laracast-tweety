@@ -23,17 +23,15 @@
     <div id="app">
         <section class="px-8 py-4 mb-6">
             <header class="container mx-auto">
-                <h1>
-                    <img src="/images/logo.svg" alt="Tweety">
-                </h1>
+                <a href="/">
+                    <h1>
+                        <img src="/images/logo.svg" alt="Tweety">
+                    </h1>
+                </a>
             </header>
         </section>
 
-        <section class="px-8">
-            <main class="container mx-auto">
-                @yield('content')
-            </main>
-        </section>
+        {{ $slot }}
     </div>
 </body>
 </html>
